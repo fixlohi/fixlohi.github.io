@@ -37,7 +37,7 @@
     .logo {
       display: block;
       margin: 0 auto 20px auto;
-      max-width: 120px; /* reduced from 180px */
+      max-width: 120px;
     }
 
     .tagline {
@@ -45,6 +45,10 @@
       font-weight: 600;
       color: #333;
       margin-bottom: 25px;
+    }
+
+    .tagline .highlight {
+      color: #1a5c2a;
     }
 
     .contact p {
@@ -61,6 +65,25 @@
       text-decoration: underline;
     }
 
+    .address {
+      margin: 8px 0 16px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: #e0e0e0;
+      margin: 16px auto;
+    }
+
+    .legal {
+      font-size: 13px;
+      color: #888;
+      margin-top: 4px;
+    }
+
     @media (max-width: 480px) {
       .card {
         padding: 30px 20px;
@@ -71,19 +94,26 @@
 <body>
 
   <div class="card">
-    <img src="logo.png" alt="Logo" class="logo">
+    <img src="logo.png" alt="Hilofix Logo" class="logo">
 
-    <div class="tagline">Quality Refurbished Laptops</div>
+    <div class="tagline">Quality <span class="highlight">Refurbished</span> Laptops</div>
 
     <div class="contact">
       <p>Email: <a href="mailto:info@hilofix.com">info@hilofix.com</a></p>
       <p>Phone: <a href="tel:+447587708248">+44 7587 708208</a></p>
-      <p>Address:  Square Root Business Centre</p>
-      <p>          102-116 Windmill Road</p>
-      <p>          Croydon, Surrey</p>
-      <p>          CR0 2XQ</p>
-      <p>Registered in England and Wales</p>                            
-      <p>Company number: 17142131</p>
+
+      <div class="divider"></div>
+
+      <div class="address">
+        Square Root Business Centre<br>
+        102–116 Windmill Road<br>
+        Croydon, Surrey<br>
+        CR0 2XQ
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="legal">Registered in England and Wales &middot; Company no. 17142131</p>
     </div>
   </div>
 
