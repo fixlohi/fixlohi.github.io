@@ -15,133 +15,37 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Preconnect to external origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Cloudflare Web Analytics -->
-  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2e68ce1756ed4e1daf2044b389cebbad"}'></script>
-  <!-- End Cloudflare Web Analytics -->
+  <!-- Google Fonts — non-blocking -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"></noscript>
+
+  <!-- Preload logo -->
+  <link rel="preload" href="/logo.png" as="image">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f5f7fa;
-      color: #333;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-
-    .card {
-      background: #ffffff;
-      padding: 40px 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      text-align: center;
-      max-width: 600px;
-      width: 90%;
-    }
-
-    .logo {
-      display: block;
-      margin: 0 auto 20px auto;
-      max-width: 120px;
-    }
-
-    .tagline {
-      font-size: 16px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 25px;
-    }
-
-    .tagline .highlight {
-      color: #1a5c2a;
-    }
-
-    .contact p {
-      margin: 8px 0;
-      font-size: 15px;
-    }
-
-    .contact a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    .address {
-      margin: 8px 0 16px;
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    .divider {
-      width: 40px;
-      height: 1px;
-      background: #e0e0e0;
-      margin: 16px auto;
-    }
-
-    .legal {
-      font-size: 13px;
-      color: #888;
-      margin-top: 4px;
-    }
-
-    @media (max-width: 480px) {
-      .card {
-        padding: 30px 20px;
-      }
-    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:#f5f7fa;color:#333;display:flex;align-items:center;justify-content:center;min-height:100vh}
+    .card{background:#fff;padding:40px 30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08);text-align:center;max-width:600px;width:90%}
+    .logo{display:block;margin:0 auto 20px;max-width:120px}
+    .tagline{font-size:16px;font-weight:600;color:#333;margin-bottom:25px}
+    .tagline .highlight{color:#1a5c2a}
+    .contact p{margin:8px 0;font-size:15px}
+    .contact a{color:#0066cc;text-decoration:none}
+    .contact a:hover{text-decoration:underline}
+    .address{margin:8px 0 16px;font-size:15px;line-height:1.7}
+    .divider{width:40px;height:1px;background:#e0e0e0;margin:16px auto}
+    .legal{font-size:13px;color:#888;margin-top:4px}
+    @media(max-width:480px){.card{padding:30px 20px}}
   </style>
-  
-  <!-- PostHog Analytics -->
-  <script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Dr qr Ci Br Zr Pr capture calculateEventProperties Ur register register_once register_for_session unregister unregister_for_session Xr getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Jr identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Gr Hr createPersonProfile setInternalOrTestUser Wr Fr tn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing $r debug ki Yr getPageViewId captureTraceFeedback captureTraceMetric Rr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    
-    posthog.init('phc_yBChuuyRp6XQwQJfhp9vbjtUju4XZWwrNyWigvX3gdNy', {
-        api_host: 'https://eu.i.posthog.com',
-        
-        // --- PERSISTENCE & IDENTIFICATION ---
-        persistence: 'localStorage+cookie',     // Remembers user via cookies AND browser storage
-        person_profiles: 'always',              // Creates a full profile for every single visitor
-        
-        // --- DATA COLLECTION ---
-        autocapture: true,                      // Automatically tracks every click and interaction
-        capture_pageview: true,                 // Tracks every page visit
-        enable_heatmaps: true,                  // Collects data for click heatmaps
-        
-        // --- SESSION RECORDING (VIDEO) ---
-        session_recording: {
-            enabled: true,                      // Records the user's screen/actions
-            maskAllInputFields: false,          // Captures what they type (use with caution)
-            recordCanvas: true                  // Records visual elements like graphs/animations
-        },
-
-        // --- BYPASS CONSENT LOGIC ---
-        opt_out_capturing_by_default: false,    // Starts capturing instantly
-        bootstrap: {
-            isIdentified: true                  // Tells PostHog to treat everyone as a trackable user
-        }
-    })
-</script>
-  <!-- End PostHog Analytics -->
-
 </head>
 <body>
 
   <div class="card">
-    <img src="logo.png" alt="Hilofix Logo" class="logo">
+    <img src="/logo.png" alt="Hilofix Logo" class="logo" width="120" height="120" fetchpriority="high">
 
     <div class="tagline">Quality <span class="highlight">Refurbished</span> Laptops</div>
 
@@ -163,6 +67,36 @@
       <p class="legal">Registered in England and Wales &middot; Company no. 17142131</p>
     </div>
   </div>
+
+  <!-- PostHog Analytics — deferred, non-blocking -->
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Dr qr Ci Br Zr Pr capture calculateEventProperties Ur register register_once register_for_session unregister unregister_for_session Xr getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Jr identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Gr Hr createPersonProfile setInternalOrTestUser Wr Fr tn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing $r debug ki Yr getPageViewId captureTraceFeedback captureTraceMetric Rr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    
+    posthog.init('phc_yBChuuyRp6XQwQJfhp9vbjtUju4XZWwrNyWigvX3gdNy', {
+        api_host: 'https://eu.i.posthog.com',
+        
+        // --- FULL POWER CONFIGURATION ---
+        persistence: 'localStorage+cookie',     // Maximum persistence to remember users
+        person_profiles: 'always',              // Create profiles for every visitor immediately
+        autocapture: true,                      // Track all clicks/inputs automatically
+        capture_pageview: true,                 // Log every page visit
+        
+        // --- VISUAL TRACKING ---
+        session_recording: {
+            enabled: true,                      // Full video playback of user sessions
+            maskAllInputFields: false,          // Capture what users type into forms
+            recordCanvas: true                  // Capture visual graphs/animations
+        },
+
+        // --- PERFORMANCE & BEHAVIOR ---
+        opt_out_capturing_by_default: false,    // No delay: Start tracking immediately
+        advanced_disable_decide: false,         // Ensure all feature detection is active
+        enable_heatmaps: true                   // Enable visual click-maps
+    })
+</script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "2e68ce1756ed4e1daf2044b389cebbad"}'></script>
 
 </body>
 </html>
