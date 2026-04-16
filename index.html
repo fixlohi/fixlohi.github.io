@@ -4,17 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HILOFIX | Quality Refurbished Laptops to match your budget</title>
-  <meta name="description" content="HILOFIX supplies quality refurbished laptops to businesses and individuals in Thornton Heath, across the UK and beyond. Reliable hardware, to match your budget, and ready to use.">
+  <meta name="description" content="HILOFIX supplies quality refurbished laptops to businesses and individuals in Thornton Heath, Croydon, across the UK and beyond. Reliable hardware, to match your budget, and ready to use.">
   <link rel="canonical" href="https://hilofix.com/">
 
-  <!-- Critical connection hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Critical image preload -->
   <link rel="preload" href="/logo.png" as="image">
 
-  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -23,32 +19,41 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <!-- Non-blocking font load -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap">
-  </noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"></noscript>
 
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#f5f7fa;
+      --card:#fff;
+      --text:#333;
+      --muted:#888;
+      --line:#e0e0e0;
+      --link:#0066cc;
+      --accent:#25D366;
+      --cta-bg:#1a5c2a;
+      --cta-bg-hover:#144821;
+      --cta-text:#fff;
+      --shadow:0 10px 30px rgba(0,0,0,.08)
+    }
     body{
       min-height:100vh;
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:0 0 5vh;
-      background:#f5f7fa;
-      color:#333;
+      padding:24px 0 5vh;
+      background:var(--bg);
+      color:var(--text);
       font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif
     }
     .card{
-      width:90%;
-      max-width:600px;
+      width:min(90%,600px);
       padding:40px 30px;
       text-align:center;
-      background:#fff;
+      background:var(--card);
       border-radius:12px;
-      box-shadow:0 10px 30px rgba(0,0,0,.08)
+      box-shadow:var(--shadow)
     }
     .logo{
       display:block;
@@ -56,20 +61,46 @@
       max-width:120px;
       height:auto
     }
-    .tagline{
-      margin-bottom:25px;
-      color:#333;
+    .page-title{
+      margin-bottom:14px;
       font-size:16px;
       font-weight:600;
-      line-height:1.35
+      line-height:1.35;
+      color:var(--text)
     }
-    .tagline .highlight{color:inherit}
-    .contact p{margin:8px 0;font-size:15px}
+    .page-title .highlight{color:inherit}
+    .cta-wrap{
+      display:flex;
+      justify-content:center;
+      margin:0 0 22px
+    }
+    .cta-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:32px;
+      padding:0 12px;
+      border-radius:999px;
+      background:var(--cta-bg);
+      color:var(--cta-text);
+      text-decoration:none;
+      font-size:12.5px;
+      font-weight:600;
+      line-height:1;
+      box-shadow:0 6px 18px rgba(26,92,42,.18);
+      transition:background-color .2s ease,transform .2s ease
+    }
+    .cta-button:hover,
+    .cta-button:focus-visible{
+      background:var(--cta-bg-hover);
+      transform:translateY(-1px)
+    }
     .contact a{
-      color:#0066cc;
+      color:var(--link);
       text-decoration:none
     }
-    .contact a:hover{text-decoration:underline}
+    .contact a:hover,
+    .contact a:focus-visible{text-decoration:underline}
     .contact-list{
       display:inline-flex;
       flex-direction:column;
@@ -93,16 +124,17 @@
       width:40px;
       height:1px;
       margin:16px auto;
-      background:#e0e0e0
+      background:var(--line)
     }
     .address{
       margin:8px 0 16px;
       font-size:15px;
-      line-height:1.7
+      line-height:1.7;
+      font-style:normal
     }
     .legal{
       margin-top:4px;
-      color:#888;
+      color:var(--muted);
       font-size:13px
     }
     @media (max-width:480px){
@@ -122,7 +154,11 @@
       decoding="async"
     >
 
-    <h1 class="tagline">Quality <span class="highlight">Refurbished</span> Laptops</h1>
+    <h1 class="page-title">Quality <span class="highlight">Refurbished</span> Laptops</h1>
+
+    <nav class="cta-wrap" aria-label="Primary">
+      <a href="/about.html" class="cta-button">About Us</a>
+    </nav>
 
     <section class="contact" aria-label="Contact information">
       <div class="contact-list">
@@ -170,10 +206,8 @@
     </section>
   </main>
 
-  <!-- PostHog Analytics — deferred, non-blocking -->
   <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Dr qr Ci Br Zr Pr capture calculateEventProperties Ur register register_once register_for_session unregister unregister_for_session Xr getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Jr identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Gr Hr createPersonProfile setInternalOrTestUser Wr Fr tn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing $r debug ki Yr getPageViewId captureTraceFeedback captureTraceMetric Rr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-
     posthog.init('phc_yBChuuyRp6XQwQJfhp9vbjtUju4XZWwrNyWigvX3gdNy', {
       api_host: 'https://eu.i.posthog.com',
       persistence: 'localStorage+cookie',
@@ -191,7 +225,6 @@
     });
   </script>
 
-  <!-- Cloudflare Web Analytics -->
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"2e68ce1756ed4e1daf2044b389cebbad"}'></script>
 </body>
 </html>
