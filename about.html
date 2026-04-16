@@ -9,18 +9,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="/logo.png" as="image">
+  <link rel="preload" href="/logo.png" as="image" fetchpriority="high">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"></noscript>
 
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
@@ -31,10 +25,8 @@
       --muted:#888;
       --line:#e0e0e0;
       --link:#0066cc;
-      --accent:#25D366;
-      --cta-bg:#1a5c2a;
-      --cta-bg-hover:#144821;
-      --cta-text:#fff;
+      --cta:#1a5c2a;
+      --cta-hover:#144821;
       --shadow:0 10px 30px rgba(0,0,0,.08)
     }
     body{
@@ -45,34 +37,20 @@
       padding:24px 0 5vh;
       background:var(--bg);
       color:var(--text);
-      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif
+      font-family:Inter,system-ui,sans-serif
     }
     .card{
       width:min(90%,600px);
       padding:40px 30px;
-      text-align:center;
       background:var(--card);
       border-radius:12px;
-      box-shadow:var(--shadow)
+      box-shadow:var(--shadow);
+      text-align:center
     }
-    .logo{
-      display:block;
-      margin:0 auto 20px;
-      max-width:120px;
-      height:auto
-    }
-    .tagline{
-      margin-bottom:14px;
-      font-size:16px;
-      font-weight:600;
-      line-height:1.35;
-      color:var(--text)
-    }
-    .cta-wrap{
-      display:flex;
-      justify-content:center;
-      margin:0 0 24px
-    }
+    .logo{margin:0 auto 20px;width:120px;height:120px}
+    .tagline{margin-bottom:14px;font-size:16px;font-weight:600}
+
+    .cta-wrap{margin-bottom:24px}
     .cta-button{
       display:inline-flex;
       align-items:center;
@@ -80,155 +58,75 @@
       min-height:32px;
       padding:0 12px;
       border-radius:999px;
-      background:var(--cta-bg);
-      color:var(--cta-text);
+      background:var(--cta);
+      color:#fff;
       text-decoration:none;
       font-size:12.5px;
-      font-weight:600;
-      line-height:1;
-      box-shadow:0 6px 18px rgba(26,92,42,.18);
-      transition:background-color .2s ease,transform .2s ease
+      font-weight:600
     }
-    .cta-button:hover,
-    .cta-button:focus-visible{
-      background:var(--cta-bg-hover);
-      transform:translateY(-1px)
-    }
-    .page-title{
-      margin:0 0 12px;
-      font-size:22px;
-      line-height:1.25;
-      font-weight:700
-    }
-    .section-title{
-      margin:20px 0 12px;
-      font-size:18px;
-      line-height:1.3;
-      font-weight:700
-    }
-    .content{
-      display:flex;
-      flex-direction:column;
-      align-items:center
-    }
-    .content p{
-      max-width:520px;
-      margin:0 0 16px;
-      font-size:15px;
-      line-height:1.7
-    }
+    .cta-button:hover{background:var(--cta-hover)}
+
+    h2{margin-bottom:12px;margin-top:20px}
+    p{margin-bottom:16px;max-width:520px;margin-left:auto;margin-right:auto}
+
     .whatsapp-contact{
       display:inline-flex;
       align-items:center;
-      justify-content:center;
       gap:8px;
-      margin:4px 0 22px;
+      margin:10px 0 24px;
       color:var(--link);
-      text-decoration:none;
-      font-size:15px
+      text-decoration:none
     }
-    .whatsapp-contact:hover,
-    .whatsapp-contact:focus-visible{
-      text-decoration:underline
-    }
-    .selling-points{
-      list-style:none;
-      max-width:520px;
-      margin:0;
-      padding:0
-    }
-    .selling-points li{
-      margin:0 0 12px;
-      font-size:15px;
-      line-height:1.7
-    }
+    .whatsapp-contact:hover{text-decoration:underline}
+
     .divider{
       width:40px;
       height:1px;
       margin:16px auto;
       background:var(--line)
     }
-    .legal{
-      margin-top:4px;
-      color:var(--muted);
-      font-size:13px
-    }
-    @media (max-width:480px){
-      .card{padding:30px 20px}
-    }
+    .legal{font-size:13px;color:var(--muted)}
   </style>
 </head>
+
 <body>
   <main class="card">
-    <img
-      src="/logo.png"
-      alt="Hilofix Logo"
-      class="logo"
-      width="120"
-      height="120"
-      fetchpriority="high"
-      decoding="async"
-    >
+    <img src="/logo.png" alt="Hilofix Logo" class="logo" width="120" height="120">
 
     <p class="tagline">Quality Refurbished Laptops</p>
 
-    <nav class="cta-wrap" aria-label="Primary">
+    <div class="cta-wrap">
       <a href="/" class="cta-button">Home</a>
-    </nav>
+    </div>
 
-    <article class="content">
-      <h1 class="page-title">About Us</h1>
+    <section>
+      <h2>Who We Are</h2>
+      <p>
+        Hilofix sell quality, refurbished laptops to meet the requirements and budgets of individuals and businesses in Croydon, the UK, and beyond. We specialise in reliable, business-grade machines from the likes of Dell, HP, and Lenovo.
+      </p>
 
-      <section aria-labelledby="who-we-are">
-        <h2 id="who-we-are" class="section-title">Who We Are</h2>
-        <p>Hilofix sell quality, refurbished laptops to meet the requirements and budgets of individuals and businesses in Croydon, the UK, and beyond. We specialise in reliable, business-grade machines from the likes of Dell, HP, and Lenovo.</p>
-      </section>
-
-      <a href="https://wa.me/447587708248" target="_blank" rel="noopener noreferrer" class="whatsapp-contact" aria-label="Message Hilofix on WhatsApp at plus 44 7587 708248">
+      <a href="https://wa.me/447587708248" target="_blank" rel="noopener noreferrer" class="whatsapp-contact">
         <span aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="#25D366">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.520.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.520-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.500-.669-.510-.173-.008-.371-.010-.570-.010-.198 0-.520.074-.792.372-.272.297-1.040 1.016-1.040 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.200 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.360.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.570-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.510-5.260c.001-5.450 4.436-9.884 9.888-9.884 2.640 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.450-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .160 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413z"/>
           </svg>
         </span>
         <span>+44 7587 708248</span>
       </a>
 
-      <section aria-labelledby="what-we-sell">
-        <h2 id="what-we-sell" class="section-title">What We Sell</h2>
-        <p>Whether you need a single machine for college work, a few machines for a small business, or a fleet of machines for a school we match you with hardware that fits your specific needs and budget.</p>
+      <h2>What We Sell</h2>
+      <p>
+        Whether you need a single machine for college work, a few machines for a small business, or a fleet of machines for a school we match you with hardware that fits your specific needs and budget.
+      </p>
 
-        <ul class="selling-points">
-          <li><strong>Individual Units:</strong> Dependable laptops for personal use and study.</li>
-          <li><strong>Volume Fulfillment:</strong> Scalable hardware solutions for growing teams.</li>
-          <li><strong>Enterprise Supply:</strong> Consistent, high-volume stock for education, charities, and institutional buyers.</li>
-        </ul>
-      </section>
-    </article>
+      <p><strong>Individual Units:</strong> Dependable laptops for personal use and study.</p>
+      <p><strong>Volume Fulfillment:</strong> Scalable hardware solutions for growing teams.</p>
+      <p><strong>Enterprise Supply:</strong> Consistent, high-volume stock for education, charities, and institutional buyers.</p>
+    </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="divider"></div>
 
-    <p class="legal">Registered in England and Wales &middot; Company no. 17142131</p>
+    <p class="legal">Registered in England and Wales · Company no. 17142131</p>
   </main>
-
-  <script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Dr qr Ci Br Zr Pr capture calculateEventProperties Ur register register_once register_for_session unregister unregister_for_session Xr getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Jr identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Gr Hr createPersonProfile setInternalOrTestUser Wr Fr tn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing $r debug ki Yr getPageViewId captureTraceFeedback captureTraceMetric Rr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    posthog.init('phc_yBChuuyRp6XQwQJfhp9vbjtUju4XZWwrNyWigvX3gdNy', {
-      api_host: 'https://eu.i.posthog.com',
-      persistence: 'localStorage+cookie',
-      person_profiles: 'always',
-      autocapture: true,
-      capture_pageview: true,
-      session_recording: {
-        enabled: true,
-        maskAllInputFields: false,
-        recordCanvas: true
-      },
-      opt_out_capturing_by_default: false,
-      advanced_disable_decide: false,
-      enable_heatmaps: true
-    });
-  </script>
-
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"2e68ce1756ed4e1daf2044b389cebbad"}'></script>
 </body>
 </html>
